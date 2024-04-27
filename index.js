@@ -2,13 +2,13 @@ import "./index.scss"
 
 console.log("teste webpack")
 
-document.getElementById("findButton").addEventListener("click", encontrarDado)
-document.getElementById("filterButton").addEventListener("click", filtrarDado)
+document.getElementById("findButton").addEventListener("click", encontrar)
+document.getElementById("filterButton").addEventListener("click", filtrar)
 
-function encontrarDado(){
+function encontrar(){
     console.log("teste encontrar")
 }
 
-function filtrarDado(){
+function filtrar(){
     console.log("teste filtrar")
 } 
