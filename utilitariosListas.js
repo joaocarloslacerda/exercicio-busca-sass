@@ -1,5 +1,4 @@
 function findData(dado, listaValores){
-
     const resultado = listaValores.find((element) => element === dado);
 
     if(resultado === dado){
@@ -7,14 +6,15 @@ function findData(dado, listaValores){
     }
     else{
         return `Não encontrado!`
-    }
+    };
 };
 
 function filterData(dado, listaValores){
+    const arrayResult = listaValores.filter((element) => dado.includes(element));
 
-    let count = listaValores.filter((element) => element === dado)
+    const count = arrayResult.length;
 
-    
+    return `${count} encontrados`
 };
 
 module.exports = {

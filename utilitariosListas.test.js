@@ -18,15 +18,23 @@ describe("Card FIND - Retorna `Não Encontrado` caso não seja encontrado um det
 });
 describe("Card FILTER - Retorna `x encontrados` caso seja encontrado um determinado valor x vezes na lista", () => {
     const listaValores = ["maça", 9, "arroz", "suco", 80]
+
+    const listaSecundariaUm = ["maça", 9];
+    const listaSecundariaDois = ["arroz", "suco", 80];
+
     test("Encontrar valor na lista", () => {
-        expect(filterData("maça", 9, listaValores)).toBe("2 encontrados");
-        expect(filterData("arroz", "suco", 80, listaValores)).toBe("3 encontrados");
+        expect(filterData(listaSecundariaUm, listaValores)).toBe("2 encontrados");
+        expect(filterData(listaSecundariaDois, listaValores)).toBe("3 encontrados");
     });
 });
 describe("Card FILTER - Retorna `0 encontrados` caso não seja encontrado um determinado valor", () => {
     const listaValores = ["maça", 9, "arroz", "suco", 80]
+
+    const listaSecundariaUm = ["feijao", 15];
+    const listaSecundariaDois = [81, "batata", "uva"];
+    
     test("Encontrar valor na lista", () => {
-        expect(filterData("feijao", 15, listaValores)).toBe("0 encontrados");
-        expect(filterData(81, "batata", "uva", listaValores)).toBe("0 encontrados");
+        expect(filterData(listaSecundariaUm, listaValores)).toBe("0 encontrados");
+        expect(filterData(listaSecundariaDois, listaValores)).toBe("0 encontrados");
     });
 });
