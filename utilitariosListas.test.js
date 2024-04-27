@@ -1,4 +1,5 @@
-// import "./utilitariosListas"
+// import {findData, filterData} from "./utilitariosListas"
+// import  "./utilitariosListas.js"
 
 const {findData, filterData} = require('./utilitariosListas')
 
@@ -17,24 +18,18 @@ describe("Card FIND - Retorna `Não Encontrado` caso não seja encontrado um det
     });
 });
 describe("Card FILTER - Retorna `x encontrados` caso seja encontrado um determinado valor x vezes na lista", () => {
-    const listaValores = ["maça", 9, "arroz", "suco", 80]
-
-    const listaSecundariaUm = ["maça", 9];
-    const listaSecundariaDois = ["arroz", "suco", 80];
+    const listaValores = ["maça", 9, "arroz", "maça", 80]
 
     test("Encontrar valor na lista", () => {
-        expect(filterData(listaSecundariaUm, listaValores)).toBe("2 encontrados");
-        expect(filterData(listaSecundariaDois, listaValores)).toBe("3 encontrados");
+        expect(filterData("maça", listaValores)).toBe("2 encontrados");
+        expect(filterData(80, listaValores)).toBe("1 encontrados");
     });
 });
 describe("Card FILTER - Retorna `0 encontrados` caso não seja encontrado um determinado valor", () => {
-    const listaValores = ["maça", 9, "arroz", "suco", 80]
-
-    const listaSecundariaUm = ["feijao", 15];
-    const listaSecundariaDois = [81, "batata", "uva"];
+    const listaValores = ["maça", 9, "arroz", "maça", 80]
     
     test("Encontrar valor na lista", () => {
-        expect(filterData(listaSecundariaUm, listaValores)).toBe("0 encontrados");
-        expect(filterData(listaSecundariaDois, listaValores)).toBe("0 encontrados");
+        expect(filterData("feijao", listaValores)).toBe("0 encontrados");
+        expect(filterData(81, listaValores)).toBe("0 encontrados");
     });
 });

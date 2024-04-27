@@ -10,7 +10,7 @@ function findData(dado, listaValores){
 };
 
 function filterData(dado, listaValores){
-    const arrayResult = listaValores.filter((element) => dado.includes(element));
+    const arrayResult = listaValores.filter((element) => element === dado);
 
     const count = arrayResult.length;
 
