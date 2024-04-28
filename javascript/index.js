@@ -1,7 +1,7 @@
-import "../scss/index.scss";
-// import "./utilitariosListas";
-import { converter } from "./converterString.js";
 const { findData, filterData } = require("./utilitariosListas.js");
+// import "./utilitariosListas";
+import "../scss/index.scss";
+import { converter } from "./converterString.js";
 
 document.getElementById("findButton").addEventListener("click", encontrar);
 document.getElementById("filterButton").addEventListener("click", filtrar);
@@ -18,11 +18,13 @@ function encontrar(){
 
     if(result === "Encontrado!"){
         campoResultFind.innerText = result;
-        campoResultFind.style.background = "#8FBCB3";
+        campoResultFind.style.background = "#20B2AA";
+        campoResultFind.style.border = "#20B2AA"; 
     }
     else{
         campoResultFind.innerText = result;
-        campoResultFind.style.background = "#B22222";
+        campoResultFind.style.background = "#DC143C";
+        campoResultFind.style.border = "#DC143C";
     };
 };
 
@@ -38,10 +40,12 @@ function filtrar(){
 
     if(result === "0 encontrados"){
         campoResultFilter.innerText = result;
-        campoResultFilter.style.background = "#B22222";
+        campoResultFilter.style.background = "#DC143C";
+        campoResultFilter.style.border = "#DC143C"; 
     }
     else{
         campoResultFilter.innerText = result;
-        campoResultFilter.style.background = "#8FBCB3";
+        campoResultFilter.style.background = "#20B2AA";
+        campoResultFilter.style.border = "#DC143C";
     }
 };
