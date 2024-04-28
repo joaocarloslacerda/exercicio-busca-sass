@@ -1,6 +1,6 @@
-const { findData, filterData } = require("./utilitariosListas.js");
-// import "./utilitariosListas";
 import "../scss/index.scss";
+// const { findData, filterData } = require("./utilitariosListas.js");
+import { findData, filterData } from "./utilitariosListas";
 import { converter } from "./converterString.js";
 
 document.getElementById("findButton").addEventListener("click", encontrar);

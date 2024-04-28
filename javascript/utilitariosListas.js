@@ -1,4 +1,4 @@
-function findData(dado, listaValores){
+export function findData(dado, listaValores){
     const resultado = listaValores.find((element) => element === dado);
 
     if(resultado === dado){
@@ -9,7 +9,7 @@ function findData(dado, listaValores){
     };
 };
 
-function filterData(dado, listaValores){
+export function filterData(dado, listaValores){
     const arrayResult = listaValores.filter((element) => element === dado);
 
     const count = arrayResult.length;
@@ -17,7 +17,7 @@ function filterData(dado, listaValores){
     return `${count} encontrados`
 };
 
-module.exports = {
-    findData,
-    filterData
-};
+// module.exports = {
+//     findData,
+//     filterData
+// };

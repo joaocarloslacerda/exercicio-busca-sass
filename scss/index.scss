@@ -15,10 +15,11 @@ body {
         padding-left: 300px;
         padding-right: 300px;
         .cardFind{
+            box-sizing: border-box;
+            @include mixinCard;
             h1{
                 @include mixinTitulo;
             }
-            @include mixinCard;
             #listaDadosFind{
                 @include mixinCamposEntradas;
                 @include mixinFormatoCampos;
@@ -26,6 +27,12 @@ body {
             #dadoFind{
                 @include mixinCamposEntradas;
                 @include mixinFormatoCampos;
+            }
+            #listaDadosFind::placeholder{
+                color: $cinza-claro;
+            }
+            #dadoFind::placeholder{
+                color: $cinza-claro;
             }
             #findButton{
                 @include mixinButton;
@@ -37,10 +44,12 @@ body {
             }
         }
         .cardFilter{
+            box-sizing: border-box;
+
+            @include mixinCard;
             h1{
                 @include mixinTitulo;
             }
-            @include mixinCard;
             #listaDadosFilter{
                 @include mixinCamposEntradas;
                 @include mixinFormatoCampos;
@@ -48,6 +57,12 @@ body {
             #dadoFilter{
                 @include mixinCamposEntradas;
                 @include mixinFormatoCampos;
+            }
+            #listaDadosFilter::placeholder{
+                color: $cinza-claro;
+            }
+            #dadoFilter::placeholder{
+                color: $cinza-claro;
             }
             #filterButton{
                 @include mixinButton;

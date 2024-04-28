@@ -1,7 +1,5 @@
-// import {findData, filterData} from "./utilitariosListas"
-// import  "./utilitariosListas.js"
-
-const {findData, filterData} = require('./utilitariosListas')
+import {findData, filterData} from "./utilitariosListas"
+// const {findData, filterData} = require('./utilitariosListas')
 
 describe("Card FIND - Retorna `Encontrado` caso seja encontrado um determinado valor na lista", () => {
     const listaValores = [1, 2, 5, 8];
