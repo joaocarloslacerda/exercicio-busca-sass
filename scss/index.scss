@@ -6,16 +6,16 @@ body {
     background-color: $verde;
     .main{
         display: flex;
+        height: 100%;
         flex-direction: row;
         flex-basis: 0;
         flex-grow: 1;
         gap: 60px;
         justify-content: center;
-        padding: 140px;
+        align-items: center;
         padding-left: 300px;
         padding-right: 300px;
         .cardFind{
-            box-sizing: border-box;
             @include mixinCard;
             h1{
                 @include mixinTitulo;
