@@ -1,0 +1,62 @@
+@import './partials/_resets';
+@import './partials/_cores';
+@import './partials/_components';
+
+body {
+    background-color: $verde;
+    .main{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 0;
+        flex-grow: 1;
+        gap: 60px;
+        justify-content: center;
+        padding: 140px;
+        padding-left: 300px;
+        padding-right: 300px;
+        .cardFind{
+            h1{
+                @include mixinTitulo;
+            }
+            @include mixinCard;
+            #listaDadosFind{
+                @include mixinCamposEntradas;
+                @include mixinFormatoCampos;
+            }
+            #dadoFind{
+                @include mixinCamposEntradas;
+                @include mixinFormatoCampos;
+            }
+            #findButton{
+                @include mixinButton;
+                @include mixinFormatoCampos;
+            }
+            #resultFind{
+                @include mixinResult;
+                @include mixinFormatoCampos;
+            }
+        }
+        .cardFilter{
+            h1{
+                @include mixinTitulo;
+            }
+            @include mixinCard;
+            #listaDadosFilter{
+                @include mixinCamposEntradas;
+                @include mixinFormatoCampos;
+            }
+            #dadoFilter{
+                @include mixinCamposEntradas;
+                @include mixinFormatoCampos;
+            }
+            #filterButton{
+                @include mixinButton;
+                @include mixinFormatoCampos;
+            }
+            #resultFilter{
+                @include mixinResult;
+                @include mixinFormatoCampos;
+            }
+        }
+    }
+}

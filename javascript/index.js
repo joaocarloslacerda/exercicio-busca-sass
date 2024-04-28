@@ -1,7 +1,7 @@
-import "./index.scss";
+import "../scss/index.scss";
 // import "./utilitariosListas";
-import { converter } from "./converterString.js"
-const { findData, filterData } = require("./utilitariosListas")
+import { converter } from "./converterString.js";
+const { findData, filterData } = require("./utilitariosListas.js");
 
 document.getElementById("findButton").addEventListener("click", encontrar);
 document.getElementById("filterButton").addEventListener("click", filtrar);

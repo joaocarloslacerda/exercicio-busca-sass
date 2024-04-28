@@ -1,0 +1,38 @@
+@mixin mixinCard{
+    background-color: $cinza-claro;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin mixinTitulo{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+@mixin mixinCamposEntradas{
+    border: $cinza-medio 2px solid;
+}
+
+@mixin mixinButton{
+    background-color: $cinza-escuro;
+    color: $branco;
+    border: $cinza-escuro 2px solid;
+}
+
+@mixin mixinResult{
+    background-color: $amarelo;
+    color: $branco;
+    border: $amarelo 2px solid;
+}
+
+@mixin mixinFormatoCampos{
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 15px;
+}
